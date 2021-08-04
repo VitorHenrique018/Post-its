@@ -24,21 +24,28 @@ export const ContainerBody = styled.div`
 `;
 export const PostData = styled.div`
   flex-direction: column;
-  width: 22%;
+  width: 225px;
   height: 10vh;
   background-color: #e9ecef;
   padding: 2rem;
   border-radius: 5px;
   margin-right: 1rem;
   margin-bottom: 2rem;
+  font-family: sans-serif;
 
   button {
     float: right;
   }
 
+  hr {
+    border:  0.1px dashed  #c5c5c5;
+  }
+
   @media (max-width: 768px) {
     width: 75%;
   }
+
+
 `;
 export const ContainerSpan = styled.span`
   color: #1c9997;
@@ -47,4 +54,9 @@ export const ContainerSpan = styled.span`
 
 export const ContainerP = styled.span`
   color: grey;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  overflow: hidden;
 `;

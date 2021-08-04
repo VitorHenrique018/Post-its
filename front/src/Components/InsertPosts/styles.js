@@ -16,6 +16,8 @@ export const ContainerBody = styled.div`
   width: 100%;
   height: 100%;
   border-right: 2px solid orange;
+  font-family: sans-serif;
+
 
   @media (max-width: 768px) {
     width: 100%;
@@ -39,6 +41,8 @@ export const ContainerInput = styled.input`
   padding-left: 1rem;
   border: none;
   border-radius: 3px;
+  font-family: sans-serif;
+
 `;
 
 export const ContainerTextArea = styled.textarea`
@@ -50,6 +54,8 @@ export const ContainerTextArea = styled.textarea`
   border: none;
   border-radius: 3px;
   margin-bottom: 0.25rem;
+  font-family: sans-serif;
+
 `;
 
 export const ContainerButton = styled.button`

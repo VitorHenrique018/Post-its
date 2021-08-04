@@ -7,7 +7,6 @@ import {
   PostData,
   ContainerSpan,
   ContainerP,
-  
 } from "./styles";
 
 export const RenderPosts = () => {
@@ -20,12 +19,12 @@ export const RenderPosts = () => {
     {
       id: 2,
       title: "Ideaflix",
-      description: "Empresa de pesquisa e inteligencia",
+      description: "Empresa de pesquisa e inteligencia ",
     },
     {
       id: 3,
       title: "Ideaflix",
-      description: "Empresa de pesquisa e inteligencia",
+      description: "Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia  ",
     },
     {
       id: 4,
@@ -39,30 +38,6 @@ export const RenderPosts = () => {
         <ContainerTitle>Suas Notas</ContainerTitle>
       </ContainerHeader>
       <ContainerBody>
-        <PostData>
-          <button>XX</button>
-          <ContainerSpan>Ideaflix</ContainerSpan>
-          <hr></hr>
-          <ContainerP>empresa de pesquisa e inteligencia</ContainerP>
-        </PostData>
-        <PostData>
-          <button>XX</button>
-          <ContainerSpan>Ideaflix</ContainerSpan>
-          <hr></hr>
-          <ContainerP>empresa de pesquisa e inteligencia</ContainerP>
-        </PostData>
-        <PostData>
-          <button>XX</button>
-          <ContainerSpan>Ideaflix</ContainerSpan>
-          <hr></hr>
-          <ContainerP>empresa de pesquisa e inteligencia</ContainerP>
-        </PostData>{" "}
-        <PostData>
-          <button>XX</button>
-          <ContainerSpan>Ideaflix</ContainerSpan>
-          <hr></hr>
-          <ContainerP>empresa de pesquisa e inteligencia</ContainerP>
-        </PostData>
         {data.map((index) => (
           <PostData>
             <button>XX</button>
