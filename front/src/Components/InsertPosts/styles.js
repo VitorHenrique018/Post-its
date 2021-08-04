@@ -65,4 +65,5 @@ export const ContainerButton = styled.button`
   color: white;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
 `;

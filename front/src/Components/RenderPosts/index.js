@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getPosts, deletePost } from "../../Actions/ApiPosts";
+
 import {
   Container,
   ContainerHeader,
@@ -10,37 +12,44 @@ import {
 } from "./styles";
 
 export const RenderPosts = () => {
-  const data = [
-    {
-      id: 1,
-      title: "Ideaflix",
-      description: "Empresa de pesquisa e inteligencia",
-    },
-    {
-      id: 2,
-      title: "Ideaflix",
-      description: "Empresa de pesquisa e inteligencia ",
-    },
-    {
-      id: 3,
-      title: "Ideaflix",
-      description: "Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia Empresa de pesquisa e inteligencia  ",
-    },
-    {
-      id: 4,
-      title: "Ideaflix",
-      description: "Empresa de pesquisa e inteligencia",
-    },
-  ];
+  const [postA, setPostA] = useState([]);
+
+  useEffect(() => {
+    getA();
+  }, []);
+
+  async function getA() {
+    try {
+      const resp = await getPosts();
+      console.log(resp);
+      setPostA(resp);
+    } catch (err) {
+      console.log("erro");
+    }
+  }
+
+  const handleDeletePost = (id) => {
+    deleteA(id);
+  };
+
+  async function deleteA(id) {
+    try {
+      await deletePost(id);
+      alert("Artigo excluído com sucesso.");
+    } catch (err) {
+      console.log("erro");
+    }
+  }
+
   return (
     <Container>
       <ContainerHeader>
         <ContainerTitle>Suas Notas</ContainerTitle>
       </ContainerHeader>
       <ContainerBody>
-        {data.map((index) => (
+        {postA?.map((index) => (
           <PostData>
-            <button>XX</button>
+            <button onClick={() => handleDeletePost(index.id)}>XX</button>
             <ContainerSpan>{index.title}</ContainerSpan>
             <hr></hr>
             <ContainerP>{index.description}</ContainerP>
