@@ -27,12 +27,13 @@ export const PostData = styled.div`
   flex-direction: column;
   width: 300px;
   height: 15vh;
-  background-color: #e9ecef;
+  background-color: #eceeee;
   border-radius: 5px;
   margin-right: 1rem;
   margin-bottom: 2rem;
   font-family: sans-serif;
   position: relative;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
   hr {
     border:  0.1px dashed  #c5c5c5;
   }
@@ -52,8 +53,14 @@ export const PostDataHeader = styled.div`
 
   button{
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -5px;
+    right: -7px;
+    border-radius: 50%;
+    background-color: #aab2b1;
+    border: 1px solid #eceeee;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
   }
   
 `;
@@ -73,6 +80,11 @@ export const PostDataBody = styled.div`
 export const ContainerSpan = styled.span`
   color: #1c9997;
   font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  overflow: hidden;
 `;
 
 export const ContainerP = styled.span`

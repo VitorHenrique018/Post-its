@@ -18,7 +18,6 @@ export const ContainerBody = styled.div`
   border-right: 2px solid orange;
   font-family: sans-serif;
 
-
   @media (max-width: 768px) {
     width: 100%;
     border-right: none
@@ -37,11 +36,16 @@ export const ContainerInput = styled.input`
   margin-top: 1rem;
   margin-bottom: 1rem;
   background-color: #e9ecef;
-  color: #c5c5c5;
+  color: grey;
   padding-left: 1rem;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   font-family: sans-serif;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  
+  @media (max-width: 768px) {
+    width: 87%;
+  }
 
 `;
 
@@ -49,21 +53,29 @@ export const ContainerTextArea = styled.textarea`
   width: 80%;
   height: 5rem;
   background-color: #e9ecef;
-  color: #c5c5c5;
+  color: grey;
   padding-left: 1rem;
   border: none;
-  border-radius: 3px;
-  margin-bottom: 0.25rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
   font-family: sans-serif;
+  resize: none;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    width: 87%;
+  }
 
 `;
 
 export const ContainerButton = styled.button`
-  background-color: orange;
   width: 50%;
+  background-color: orange;
   height: 3.5vh;
   color: white;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
 `;

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { createPost } from "../../Actions/ApiPosts";
+import React from "react";
 
 import {
   Container,
@@ -10,29 +9,8 @@ import {
   ContainerButton,
 } from "./styles";
 
-export const InsertPosts = () => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+export const InsertPosts = ({title, setTitle, description, setDescription, postA}) => {
 
-  async function postA() {
-    const obj = {
-      title: title,
-      description: description,
-    };
-    try {
-      await createPost(obj);
-      alert("Post Adicionado com sucesso.");
-    } catch (err) {
-      console.log("erro");
-    }
-    setTitle("");
-    setDescription("");
-  }
-
-  const criarArtigo = () => {
-    postA();
-  };
-  
   return (
     <Container>
       <ContainerBody>
@@ -49,7 +27,7 @@ export const InsertPosts = () => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <ContainerButton onClick={criarArtigo}>Criar Nota</ContainerButton>
+        <ContainerButton onClick={postA}>Criar Nota</ContainerButton>
       </ContainerBody>
     </Container>
   );

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { getPosts, deletePost } from "../../Actions/ApiPosts";
+import React, { useEffect } from "react";
+import { deletePost } from "../../Actions/ApiPosts";
 
 import {
   Container,
@@ -13,22 +13,14 @@ import {
   ContainerP,
 } from "./styles";
 
-export const RenderPosts = () => {
-  const [postA, setPostA] = useState([]);
+export const RenderPosts = ({getA, data}) => {
 
   useEffect(() => {
     getA();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function getA() {
-    try {
-      const resp = await getPosts();
-      console.log(resp);
-      setPostA(resp);
-    } catch (err) {
-      console.log("erro");
-    }
-  }
+
 
   async function deleteA(id) {
     try {
@@ -46,10 +38,10 @@ export const RenderPosts = () => {
         <ContainerTitle>Suas Notas</ContainerTitle>
       </ContainerHeader>
       <ContainerBody>
-        {postA?.map((index) => (
+        {data?.map((index) => (
           <PostData>
             <PostDataHeader>
-              <button onClick={() => deleteA(index.id)}>XX</button>
+              <button onClick={() => deleteA(index.id)}>X</button>
             </PostDataHeader>
             <PostDataBody>
               <ContainerSpan>{index.title}</ContainerSpan>
