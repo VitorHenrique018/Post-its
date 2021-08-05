@@ -47,12 +47,10 @@ server.delete("/posts/:id", (req, res) => {
   const postIndex = posts.findIndex((index) => index.id === id);
 
   if (postIndex === -1) {
-    return res.status(404).json({ error: "Post não encontrado" });
+    return res.status(404).json({ error: "Post não encontrado", data: posts });
   }
 
   posts.splice(postIndex, 1);
-
-  posts.splice(id, 1);
 
   return res.json({ message: "O post foi excluído." });
 });

@@ -28,10 +28,6 @@ export const RenderPosts = () => {
     }
   }
 
-  const handleDeletePost = (id) => {
-    deleteA(id);
-  };
-
   async function deleteA(id) {
     try {
       await deletePost(id);
@@ -39,6 +35,7 @@ export const RenderPosts = () => {
     } catch (err) {
       console.log("erro");
     }
+    getA();
   }
 
   return (
@@ -49,7 +46,7 @@ export const RenderPosts = () => {
       <ContainerBody>
         {postA?.map((index) => (
           <PostData>
-            <button onClick={() => handleDeletePost(index.id)}>XX</button>
+            <button onClick={() => deleteA(index.id)}>XX</button>
             <ContainerSpan>{index.title}</ContainerSpan>
             <hr></hr>
             <ContainerP>{index.description}</ContainerP>
