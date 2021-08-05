@@ -23,30 +23,53 @@ export const ContainerBody = styled.div`
   width: 100%;
 `;
 export const PostData = styled.div`
+  display: flex;
   flex-direction: column;
-  width: 225px;
-  height: 10vh;
+  width: 300px;
+  height: 15vh;
   background-color: #e9ecef;
-  padding: 2rem;
   border-radius: 5px;
   margin-right: 1rem;
   margin-bottom: 2rem;
   font-family: sans-serif;
-
-  button {
-    float: right;
-  }
-
+  position: relative;
   hr {
     border:  0.1px dashed  #c5c5c5;
   }
 
   @media (max-width: 768px) {
-    width: 75%;
+    width: 90%;
   }
 
-
+  @media (max-width: 468px) {
+    height: 14vh;
+  }
 `;
+
+
+export const PostDataHeader = styled.div`
+  height: 5%;
+
+  button{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+  }
+  
+`;
+
+export const PostDataBody = styled.div`
+  flex-direction: column;
+  padding: 2rem;
+  hr {
+    border:  0.1px dashed  #c5c5c5;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+`;
+
 export const ContainerSpan = styled.span`
   color: #1c9997;
   font-weight: 600;

@@ -7,6 +7,8 @@ import {
   ContainerBody,
   ContainerTitle,
   PostData,
+  PostDataHeader,
+  PostDataBody,
   ContainerSpan,
   ContainerP,
 } from "./styles";
@@ -46,10 +48,14 @@ export const RenderPosts = () => {
       <ContainerBody>
         {postA?.map((index) => (
           <PostData>
-            <button onClick={() => deleteA(index.id)}>XX</button>
-            <ContainerSpan>{index.title}</ContainerSpan>
-            <hr></hr>
-            <ContainerP>{index.description}</ContainerP>
+            <PostDataHeader>
+              <button onClick={() => deleteA(index.id)}>XX</button>
+            </PostDataHeader>
+            <PostDataBody>
+              <ContainerSpan>{index.title}</ContainerSpan>
+              <hr></hr>
+              <ContainerP>{index.description}</ContainerP>
+            </PostDataBody>
           </PostData>
         ))}
       </ContainerBody>

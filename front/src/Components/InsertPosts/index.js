@@ -32,6 +32,7 @@ export const InsertPosts = () => {
   const criarArtigo = () => {
     postA();
   };
+  
   return (
     <Container>
       <ContainerBody>
