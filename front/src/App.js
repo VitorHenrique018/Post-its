@@ -25,15 +25,21 @@ function App() {
       title: title,
       description: description,
     };
+    if(!title.trim().length || !description.trim().length){
+      alert("Assunto e/ou mensagem não informados");
+    }
+    else{
     try {
       await createPost(obj);
       alert("Post Adicionado com sucesso.");
     } catch (err) {
       console.log("erro");
     }
+
     setTitle("");
     setDescription("");
     getA();
+  }
   }
 
   return (

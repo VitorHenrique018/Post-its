@@ -25,7 +25,7 @@ export const RenderPosts = ({getA, data}) => {
   async function deleteA(id) {
     try {
       await deletePost(id);
-      alert("Artigo excluído com sucesso.");
+      alert("Post excluído com sucesso.");
     } catch (err) {
       console.log("erro");
     }
