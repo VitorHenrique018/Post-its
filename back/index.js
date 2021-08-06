@@ -11,16 +11,16 @@ server.use(express.json());
 server.use((req, res, next) => {
   //console.log("Acessou o middleware");
   res.header("Access-Control-Allow-Origin","*"); 
-  res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE")
+  res.header("Access-Control-Allow-Methods", "GET, POST, DELETE")
   /*pode colocar Localhost:3334 | * libera para todos., serve para os metodos tbm, put,get, post*/
   server.use(cors());
   next();//USADO PARA LIBERAR A APLICAÇÃO
 });
 
 const posts = [
-  { id: "123", title: "post 01", description: "conteudo" },
-  { id: "234", title: "post 02", description: "conteudo" },
-  { id: "345", title: "post 03", description: "conteudo" },
+  { id: "1", title: "Ideafix", description: "Empresa de pesquisa e inteligência" },
+  { id: "2", title: "Ideafix", description: "Plataform de pesquisa que gera valor" },
+  { id: "3", title: "Vaga desenvolvedor", description: "Profissional full stack para colaborar" },
 ];
 
 server.get("/search", (req, res) => {

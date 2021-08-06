@@ -43,7 +43,7 @@ export const PostData = styled.div`
   }
 
   @media (max-width: 468px) {
-    height: 14vh;
+    height: 18vh;
   }
 `;
 

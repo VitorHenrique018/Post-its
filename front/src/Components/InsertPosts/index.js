@@ -27,7 +27,7 @@ export const InsertPosts = ({title, setTitle, description, setDescription, postA
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <ContainerButton onClick={postA}>Criar Nota</ContainerButton>
+        <ContainerButton onClick={postA}>CRIAR NOTA</ContainerButton>
       </ContainerBody>
     </Container>
   );
