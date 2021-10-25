@@ -5,7 +5,6 @@ export const Container = styled.div`
   width: 30%;
   height: 100vh;
   padding: 2rem;
-
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -17,7 +16,6 @@ export const ContainerBody = styled.div`
   height: 100%;
   border-right: 2px solid orange;
   font-family: sans-serif;
-
   @media (max-width: 768px) {
     width: 100%;
     border-right: none;
@@ -42,7 +40,6 @@ export const ContainerInput = styled.input`
   border-radius: 5px;
   font-family: sans-serif;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-
   @media (max-width: 768px) {
     width: 87%;
   }
@@ -60,7 +57,6 @@ export const ContainerTextArea = styled.textarea`
   font-family: sans-serif;
   resize: none;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
-
   @media (max-width: 768px) {
     width: 87%;
   }
@@ -77,11 +73,9 @@ export const ContainerButton = styled.button`
   display: block;
   margin-left: auto;
   margin-right: 15%;
-
   @media (max-width: 1280px) {
     margin-right: 10%;
   }
-
   @media (max-width: 468px) {
     margin-right: 8%;
   }
