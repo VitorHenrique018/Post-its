@@ -9,8 +9,13 @@ import {
   ContainerButton,
 } from "./styles";
 
-export const InsertPosts = ({title, setTitle, description, setDescription, postA}) => {
-
+export const InsertPosts = ({
+  title,
+  setTitle,
+  description,
+  setDescription,
+  postA,
+}) => {
   return (
     <Container>
       <ContainerBody>

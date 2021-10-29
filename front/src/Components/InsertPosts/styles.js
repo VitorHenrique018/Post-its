@@ -78,5 +78,6 @@ export const ContainerButton = styled.button`
   }
   @media (max-width: 468px) {
     margin-right: 8%;
+
   }
 `;
